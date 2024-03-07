@@ -4,7 +4,7 @@ class Intropage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 199, 235, 243),
+      color: Color.fromARGB(255, 234, 140, 140),
       child: Center(
         child: Text(
           'Are You Ready! Get Started',

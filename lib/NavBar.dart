@@ -163,7 +163,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodbooking/about_screen.dart';
 import 'package:foodbooking/screen/Welcome/welcome_screen.dart';
-import 'package:foodbooking/screen/profile.dart';
+import 'package:foodbooking/profile.dart';
 
 class NavBar extends StatelessWidget {
   @override
