@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:foodbooking/Bookings.dart';
+import 'package:foodbooking/homepage.dart';
 import 'package:foodbooking/onboarding_screen.dart';
 
 void main() {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: OnBoardingScreen(),   
+      home: Homepage(),   
     );
   }
 }

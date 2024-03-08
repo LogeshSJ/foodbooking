@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:foodbooking/OrderPage.dart';
 import 'package:foodbooking/cancellation%20message.dart';
 import 'package:foodbooking/homepage.dart';
+import 'package:foodbooking/presentation/providers/provider.dart';
 import 'package:lottie/lottie.dart';
 
-class BookingsPage extends StatefulWidget {
+class BookingsPage extends ConsumerStatefulWidget {
   final List<OrderItem> orders;
 
   const BookingsPage({
@@ -13,10 +15,10 @@ class BookingsPage extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _BookingsPageState createState() => _BookingsPageState();
+  ConsumerState createState() => _BookingsPageState();
 }
 
-class _BookingsPageState extends State<BookingsPage> {
+class _BookingsPageState extends ConsumerState<BookingsPage> {
   late DateTime _dateTime;
   String address = 'Kaathan Street, Chengalpattu';
   bool _isOrderConfirmed = false;
@@ -129,8 +131,7 @@ class _BookingsPageState extends State<BookingsPage> {
                                 color: Colors.red,
                               ),
                               onPressed: () {
-                                // Implement delete functionality here
-                                // For example, you can show a confirmation dialog
+
                                 showDialog(
                                   context: context,
                                   builder: (BuildContext context) {
@@ -142,10 +143,9 @@ class _BookingsPageState extends State<BookingsPage> {
                                       actions: [
                                         TextButton(
                                           onPressed: () {
-                                            // Implement delete logic here
-                                            // For example, you can remove the item from the list
                                             setState(() {
-                                              widget.orders.remove(order);
+                                              // ref.read(bookingsNotifierProvider.notifier).removeFromCart(widget.orders.remove(order));
+                                              // widget.orders.remove(order);
                                             });
                                             Navigator.pop(context);
                                           },
